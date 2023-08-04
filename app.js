@@ -183,4 +183,3 @@ bellIcon.addEventListener('click', function() {
   alert("You have 50 new followers request");
   alert("137 unread messages");
 });
-  
