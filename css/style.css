@@ -87,6 +87,7 @@ header {
 }
 
 .bell-icon {
+    cursor: pointer;
     margin-right: 0.9em;
     width: 1.5em;
     height: auto;
@@ -94,9 +95,25 @@ header {
     transition: transform .4s ease-out;
 }
 
+span.bell-icon {
+    animation: horizontal-shaking 0.35s infinite;
+}
+
 .bell-icon:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
     transform: scale(1.2);
     fill: gold;
+
+}
+
+@keyframes shake {
+    0% { transform: skewX(-15deg); }
+    5% { transform: skewX(15deg); }
+    10% { transform: skewX(-15deg); }
+    15% { transform: skewX(15deg); }
+    20% { transform: skewX(0deg); }
+    100% { transform: skewX(0deg); } 
 }
 
 .dot {
@@ -243,12 +260,17 @@ canvas {
     margin: auto;
     font-weight: 300;
     font-family: 'Roboto', sans-serif;;
+    color: #7c7c7c;
 }
 
 /*------     Members     ------*/
 .members-section {
     display: flex;
     flex-direction: column;
+}
+
+a {
+    color: #8288ef;  
 }
 
 .members-container {
@@ -346,6 +368,7 @@ textarea::placeholder {
 }
 
 .toggle {
+    -webkit-appearance: none;
     position: relative;
     width: 85px;
     height: 37px;
@@ -391,6 +414,10 @@ textarea::placeholder {
     width: 95%;
 }
 
+.form-field {
+    color: #7c7c7c;
+}
+
 .settings-button {
     display: flex;
     width: 95%;
@@ -399,6 +426,7 @@ textarea::placeholder {
     justify-content: space-between;
     margin-bottom: 1em;
 }
+
 
 .button-primary,
 .button-disabled {
@@ -419,8 +447,11 @@ textarea::placeholder {
     background: #a8a2a2;
 }
 
+
 /* -----  Media Querys ----- */
+
 @media (min-width: 768px) {
+
     .grid-container {
         display: grid;
         grid-template-columns: 45px 1fr;
@@ -430,8 +461,8 @@ textarea::placeholder {
     }
 
     nav {
-        display: block;
-        margin-right: 3px;
+    display: block;
+    margin-right: 3px;
     }
 
     .nav-icon {
@@ -464,8 +495,7 @@ textarea::placeholder {
         grid-template-columns: 50%;
     }
 
-    .traffic, 
-    .social {
+    .traffic, .social {
         grid-column: 1 / span 2;
     }
 
@@ -525,7 +555,7 @@ textarea::placeholder {
     .toggle-container {
         display: flex;
         flex-direction: column;
-        width: 45%;    
+        width: 45%; 
     }
 }
 
@@ -546,7 +576,6 @@ textarea::placeholder {
         position: sticky;
         top: 20px;
         margin-left: 6px;
-
     }
 
     .charts-icon {
@@ -582,19 +611,13 @@ textarea::placeholder {
         width: 48vw;
     }
 
-    .mobile {
-        grid-column: 2 / span 1;
-        width: 48vw;
-       
-    }
-
     .main-header,
-    .alert{
+    .alert {
         grid-column: 1 / span 2;
     }
 
     .members-section,
-    .message{
+    .message {
         grid-column: 1 / span 1;
     }
 
@@ -602,7 +625,6 @@ textarea::placeholder {
     .settings {
         grid-column: 2 / span 1;
         border-left: solid 1px #00000033;
-    
     }
 
     .social {

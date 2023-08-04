@@ -63,15 +63,14 @@
                 <div class="tab"></div>
             </div>
 
-            <!-- alert banner -->
             <div class="alert" id="alert">
-                <!-- JS will insert alert here -->
+
             </div>
 
             <section class="traffic" id="charts">
                 <div class="traffic-header">
                     <h3>Traffic</h3>
-                    
+
                     <ul class="traffic-nav">
                         <li class="traffic-nav-link">Hourly</li>
                         <li class="traffic-nav-link">Daily</li>
@@ -81,26 +80,19 @@
                 </div>
                 
                 <div class="widget-container-full">
-                    <!-- element line graph will attach to -->
                     <canvas id="traffic-chart"></canvas>
                 </div >
             </section>
 
-            <!-- bar graph -->
             <section class="daily">
                 <h3>Daily Traffic</h3>
-
-                <!-- element bar graph will attach to -->
                 <div class="widget-container-half">
                     <canvas id="daily-chart"></canvas>
                 </div>
             </section>
 
-            <!-- bar graph -->
             <section class="mobile">
                 <h3>Mobile Users</h3>
-                
-                <!-- element bar graph will attach to -->
                 <canvas id="mobile-chart"></canvas>
             </section> 
             
@@ -250,7 +242,6 @@
                 </div>
             </section>
             
-            <!-- messaging widget -->
             <section class="message">
                 <h3>Message User</h3>
                 
@@ -261,7 +252,6 @@
                 </form>
             </section>
 
-            <!-- local settings widget  -->
             <section class="settings" id="settings">
                 <h3>Settings</h3>
                 
@@ -278,12 +268,13 @@
                 </div>
 
                 <select class="form-field" id="timezone">
+                    <option selected="selected">Select Timezone</option>
                     <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
                     <option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
                     <option value="-10:00">(GMT -10:00) Hawaii</option>
                     <option value="-09:50">(GMT -9:30) Taiohae</option>
                     <option value="-09:00">(GMT -9:00) Alaska</option>
-                    <option value="-08:00" selected="selected">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
+                    <option value="-08:00">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
                     <option value="-07:00">(GMT -7:00) Mountain Time (US &amp; Canada)</option>
                     <option value="-06:00">(GMT -6:00) Central Time (US &amp; Canada), Mexico City</option>
                     <option value="-05:00">(GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima</option>

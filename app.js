@@ -6,6 +6,8 @@ const mobileCanvas = document.getElementById("mobile-chart");
 const user = document.getElementById("userField");
 const message = document.getElementById("messageField");
 const send = document.getElementById("send");
+const bellIcon = document.querySelector(".bell-icon");
+
 
 
 
@@ -54,8 +56,8 @@ let trafficData = {
     ],
         
     backgroundColor: 'rgba(116, 119, 191, .3)', 
-
     borderWidth: 1,
+    tension: .4,
   }]
 };
 
@@ -174,3 +176,11 @@ send.addEventListener('click', () => {
     alert(`Message successfully sent to: ${user.value}`);
   }
 });
+
+
+
+bellIcon.addEventListener('click', function() {
+  alert("You have 50 new followers request");
+  alert("137 unread messages");
+});
+  
