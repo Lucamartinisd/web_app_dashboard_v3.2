@@ -1,0 +1,78 @@
+
+/*------------------------
+|         Header         |
+------------------------*/
+
+header {
+    background-color: rgb(132, 128, 205);
+    color: white; 
+    display: flex;
+    flex-direction: row;
+    padding: 0.7em;
+    font-size: 10px;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+  
+   
+   
+}
+
+h1 {
+   padding-left: 10px;
+    justify-content: left;
+    
+}
+
+.bell {
+   
+    padding-right:20px;
+   margin-top: 18px;
+   margin-left: 20px;
+    width: 20px;
+    border-right: rgb(160, 160, 160) solid 1px;
+    justify-content: right;
+   
+}
+
+.bell-fill {
+    fill:white;
+}
+
+.student-image {
+    border-radius: 50%;
+    max-width: 40px;
+    justify-content: right;
+
+}
+
+.student-div {
+    margin-top: 13px;
+    justify-content: right;
+    margin-right: 0px;
+    max-width: 66.5px;
+}
+.student-name {
+margin-right: 5px;
+    margin-top: 23px;
+}
+
+.nav-class{
+    background-color: rgb(94, 90, 123);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flexbox;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.icon-nav{
+    max-width: 20px;
+  
+}
+.icon-fill{
+    
+
+    fill:white;
+    max-width: 20px;
+}
