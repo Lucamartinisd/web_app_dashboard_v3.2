@@ -197,19 +197,19 @@
             </div>
             </section>
 
-            <section>
+            <section class="message-section">
                 <h2>Message User</h2>
-                <div class="user-class">
+                <div class="user-div">
                     
-                    <input id="name" type="text" name="user-search" placeholder="Search for User" required>
+                    <input class="user-box" id="name" type="text" name="user-search" placeholder="Search for User" required>
                 </div>
 
-                <div class="message-class">
+                <div class="message-div">
                     
-                    <input id="message" type="text" name="user-message" placeholder="Message for User">
+                    <textarea class="message-box" id="message" type="text" name="user-message" placeholder="Message for User"></textarea>
                 </div>
 
-                <button>Send</button>
+                <button class="send-button">Send</button>
             </section>
         </main>
 
@@ -218,21 +218,21 @@
             <section>
                 <h2>settings</h2>
 
-                <div>
-                    <form>
+                <div class="container-form">
+                    <form class="form">
                         <label for="toggle">Send Email Notifications</label>
-                        <input type="checkbox" class="toggle-class" id="toggle">
+                        <input type="checkbox" class="swich">
                     </form>               
                    
-                    <form>
+                    <form class="form">
                         <label for="toggle">Set Profile to Public</label>
-                        <input type="checkbox" class="toggle-class">
+                        <input type="checkbox" class="swich">
                     </form>
                 </div>
 
 
 
-                <select>
+                <select class="timezone-box">
                     <option selected="selected">Select Timezone</option>
                     <option data-time-zone-id="1" data-gmt-adjustment="GMT-12:00" data-use-daylight="0" value="-12">(GMT-12:00) International Date Line West</option>
                     <option data-time-zone-id="2" data-gmt-adjustment="GMT-11:00" data-use-daylight="0" value="-11">(GMT-11:00) Midway Island, Samoa</option>
@@ -318,8 +318,8 @@
                     <option data-time-zone-id="82" data-gmt-adjustment="GMT+13:00" data-use-daylight="0" value="13">(GMT+13:00) Nuku'alofa</option>
                 </select>
 
-                <button>Save</button>
-                <button>Cancel</button>
+                <button class="save-button">Save</button>
+                <button class="cancel-button">Cancel</button>
             </section>
         </footer>
     </body>
