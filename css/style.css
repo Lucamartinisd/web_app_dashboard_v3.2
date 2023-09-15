@@ -2,12 +2,11 @@
 /*------------------------
 |         Header         |
 ------------------------*/
-
 body {
    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
+    font-weight: 200;
     padding-left: 15px;
-    color:rgb(65, 65, 65);
+    color:rgb(0, 0, 0);
     display: grid;
     grid-template-columns:1fr;
     grid-template-rows: 95px 95px 1fr 1fr;
@@ -19,60 +18,50 @@ header {
     grid-column-end: 1;
     background-color: rgb(124, 122, 208);
     color: white; 
-  display: flex;
-   
-
-   padding-left: 15px;
+    display: flex;
+    padding-left: 15px;
     margin-left: -15px;
-  
     padding-bottom: 20px;
     justify-content: space-between;
     font-weight: bold;
 }
 
 h1 {
-   
     color: white; 
     font-weight: bold;
-   
 }
 
 .bell {
-   
-    
     margin-top: 35px;
     margin-left: 50px;
     width: 37px;
-    
     justify-content: right;
-   
 }
 
 .bell-fill {
     fill:white;
-   
 }
 
 .student-image {
     border-radius: 50%;
     max-width: 60px;
     justify-content: right;
-    
- 
 }
 
 .student-div {
     margin-top: 20px;
     justify-content: right;
     margin-right: 0px;
-   
     border-left: rgb(160, 160, 160) solid 1px;
     padding-left:10px;
 }
+
 .student-name {
     margin-right: 10px;
     margin-top: 37px;
 }
+
+
 
 
 /*------------------------
@@ -90,20 +79,15 @@ h1 {
     padding-right: 50px;
     flex-direction: row;
     justify-content: space-between;
-   
 }
 
-
 .icon-home{
-   
    display: flex;
     flex-direction: column;
     margin-left: 40px;
-    
-    
 }
-.icon-fill{
-    
+
+.icon-fill {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -116,17 +100,41 @@ h1 {
     margin-right: 35px;
 }
 
-.dash {
 
+
+/*------------------------
+|          MAIN         |
+------------------------*/
+#alert {
+    justify-content: center;
+    font-weight: 200;
+    font-size: 21px;
+    margin: 20px 0 40px 0;
+}
+
+.alert-banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 22px ;
+    width: 90%;
+    height: 63px;
+    border-radius: 9px;
+    background-color: rgb(124, 122, 208);
+    color: white;
+}
+
+.dash {
     display: flex;
     flex-direction: row;
 }
+
 .dashboard {
-    
     display: flex;
     flex-direction: column;
     font-size: 30px;
 }
+
 .emty-flex {
     flex-direction: row;
     display: flex;
@@ -139,10 +147,16 @@ h1 {
 }
 
 
+
+/*------------------------
+|    TRAFFIC SECTION     |
+------------------------*/
 .traffic-section {
     border-bottom: solid 2px rgb(205, 205, 205);
     margin-left: -15px;
     padding-left: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .traffic-time {
@@ -159,7 +173,18 @@ h1 {
     list-style-type: none;
     font-size: 20px;
     font-weight: 300;
+    padding: 10px 20px;
+    color: black;
 }
+
+.time:active,
+.time:hover {
+    color: #fff;
+    background: #89db85;
+    border-radius: 22% / 50%;
+    
+}
+
 
 main {
     grid-row-start: 3;
@@ -167,6 +192,11 @@ main {
     grid-column-end: 1; 
 }
 
+
+
+/*------------------------
+| DAILY TRAFFIC SECTION  |
+------------------------*/
 .daily-traffic-section {
 
     border-bottom: solid 2px rgb(205, 205, 205);
@@ -175,19 +205,26 @@ main {
 }
 
 
+
+/*------------------------
+|  MOBILE USERS SECTION  |
+------------------------*/
 .mobile-users-section {
     border-bottom: solid 2px rgb(205, 205, 205);
     margin-left: -15px;
     padding-left: 15px;
 }
 
+
+/*------------------------
+|     SOCIAL SECTION     |
+------------------------*/
 .social-stats-section {
     border-bottom: solid 2px rgb(205, 205, 205);
     margin-left: -15px;
     padding-left: 15px;
     display: flex;
     flex-direction: column;
-    
 }
 
 .social-div {
@@ -213,16 +250,10 @@ main {
 }
 .social-fill {
     width:60px;
-  
-    
     fill:white;
-
-  
-   
 }
 
 .social-text{
-
     font-size: 30px;
     color:  rgb(78, 76, 181);
     margin:0px;
@@ -238,28 +269,27 @@ main {
 }
 
 .text-numbers-div {
-
     display: flex;
     flex-direction: column;
     margin:0px;
     justify-content: center;
 }
 
+
+
+/*------------------------
+|   NEW MEMBERS SECTION  |
+------------------------*/
 .new-member-div {
     display: flex;
     flex-direction: column;
     border-bottom: solid 2px rgb(180, 180, 180);
     margin-left: -15px;
-    
- 
-   
-    
 }
+
 .members-images {
-
     border-radius: 50%;
-   
-
+   width: 100px;
 }
 
 
@@ -276,9 +306,8 @@ main {
     margin-left: 30px;
     margin-right: 30px;
     margin-top: 30px;
-   
-    
 }
+
 .member4-div {
     display: flex;
     flex-direction: column;
@@ -288,20 +317,22 @@ main {
     font-size: 25px;
     color: black;
     font-weight: 300;
-  
     margin-left: 30px;
     margin-right: 30px;
     margin-top: 30px;
-   
-    
 }
 
 a {
     text-decoration: none;
     color: rgb(114, 114, 211);
-  }
+}
 
-  .user-box {
+
+
+/*------------------------
+|  MESSAGE USER SECTION  |
+------------------------*/
+.user-box {
     color: aquamarine;
     margin: 10px;
     padding: 25px 10px;
@@ -310,12 +341,9 @@ a {
     border-radius: 7px;
     background-color: #f5f5f5;
     font-size: 23px ;
-    
-    
-  }
+}
 
-  .user-box {
-   
+.user-box {
     margin: 10px;
     padding: 20px 10px;
     width: 90%;
@@ -323,13 +351,9 @@ a {
     border-radius: 7px;
     background-color: #f5f5f5;
     font-size: 23px ;
-    
-    
-  }
+}
 
-  .message-box {
-
- 
+.message-box {
     margin: 10px;
     padding: 25px 10px;
     width: 90%;
@@ -339,17 +363,16 @@ a {
     background-color: #f5f5f5;
     font-size: 23px ;
     justify-content:flex-start;
-    
-  }
-  ::placeholder {
-    position: absolute;
-  
-  top: 5px;
- color: #b3b3b3;
-  padding: 15px 5px;
-  }
+}
 
-  .send-button {
+::placeholder {
+    position: absolute;
+    top: 5px;
+    color: #b3b3b3;
+    padding: 15px 5px;
+}
+
+.send-button {
     text-transform: uppercase;
     color: #fff;
     background: rgb(124, 122, 208);
@@ -362,13 +385,16 @@ a {
 }
 
 
-.form {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 700;
-    font-size: 25px;
 
+/*------------------------
+|    SETTINGS/FOOTER     |
+------------------------*/
+.form {
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-weight: 700;
+font-size: 25px;
 }
 
 .swich {
@@ -377,15 +403,12 @@ a {
     width: 160px;
     height: 55px;
     border-radius: 25px;
-   
     background-color: rgb(124, 122, 208);
     transition: background .3s;
     outline: none;
     cursor: pointer;
-    
     margin: 20px;
     border: solid 3px rgb(184, 184, 184);
-
 }
 
 .swich:checked::before{
@@ -394,6 +417,7 @@ a {
     left: 60%;
     color:white;
 }
+
 .swich::before{
     content: 'ON';
     position: absolute;
@@ -412,17 +436,15 @@ a {
     height: 35px;
     width: 35px;
     background-color: white;
-   border: solid 3px rgb(184, 184, 184);
+    border: solid 3px rgb(184, 184, 184);
     transition: left .3s;
 }
 
-.swich:checked {
-    
+.swich:checked {   
     background-color: #ccc;
 }
 
 .swich:checked::after {
-    
     left: 17%;
 }
 
@@ -431,8 +453,6 @@ a {
     margin-left: -15px;
 }
 
-
-
 footer {
     grid-row-start: 4;
     grid-column-start: 1;
@@ -440,10 +460,9 @@ footer {
 }
 
 .timezone-box {
-   -webkit-appearance: none;
-   -moz-appearance: none;
-   appearance: none;
-   
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     margin: 10px;
     padding: 20px 10px;
     width: 93%;
@@ -452,7 +471,6 @@ footer {
     background-color: #f5f5f5;
     font-size: 23px ;
     color: #9d9d9d;
-    
 }
 
 .save-button {
