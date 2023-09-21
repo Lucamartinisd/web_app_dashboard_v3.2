@@ -6,20 +6,22 @@ body {
    font-family: 'Roboto', sans-serif;
     font-weight: 200;
     padding-left: 15px;
-    color:rgb(0, 0, 0);
+    color:black;
     display: grid;
     grid-template-columns:1fr;
-    grid-template-rows: 95px 95px 1fr 1fr;
+    grid-template-rows: 110px 90px 1fr 1fr;
+    padding-right: 3px;
 }
+
 header {
     font-weight: lighter;
-    font-size: 20px;
+    font-size: 19px;
     grid-column-start: 1;
     grid-column-end: 1;
     background-color: rgb(124, 122, 208);
     color: white; 
     display: flex;
-    padding-left: 15px;
+  
     margin-left: -15px;
     padding-bottom: 20px;
     justify-content: space-between;
@@ -28,12 +30,17 @@ header {
 
 h1 {
     color: white; 
-    font-weight: bold;
+    
+    flex-grow: 2;
+    padding-left: 15px;
+}
+
+.bold-word {
+    font-weight: 500;
 }
 
 .bell {
-    margin-top: 35px;
-    margin-left: 50px;
+    margin: 40px 10px 0 0;
     width: 37px;
     justify-content: right;
 }
@@ -42,23 +49,54 @@ h1 {
     fill:white;
 }
 
+span.bell-fill {
+    animation: horizontal-shaking 0.35s infinite;
+}
+
+.bell-fill:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    transform: scale(1.2);
+    fill: gold;
+
+}
+
+@keyframes shake {
+    0% { transform: skewX(-15deg); }
+    5% { transform: skewX(15deg); }
+    10% { transform: skewX(-15deg); }
+    15% { transform: skewX(15deg); }
+    20% { transform: skewX(0deg); }
+    100% { transform: skewX(0deg); } 
+}
+
+.bell-dot {
+    border-radius: 50%;
+    width: 9px;
+    height: 9px;
+    background: #68f15b;
+    position: relative;
+    right:17px;
+    top: 30px;
+}
+
 .student-image {
     border-radius: 50%;
-    max-width: 60px;
+    max-width: 65px;
     justify-content: right;
+    padding: 0 12px 0 12px;
 }
 
 .student-div {
-    margin-top: 20px;
+    margin: auto 5px 0 7px;
     justify-content: right;
-    margin-right: 0px;
     border-left: rgb(160, 160, 160) solid 1px;
     padding-left:10px;
 }
 
 .student-name {
     margin-right: 10px;
-    margin-top: 37px;
+    margin-top: 39px;
 }
 
 
@@ -71,20 +109,26 @@ h1 {
     grid-column-start: 1;
     grid-row-start: 2;
     grid-column-end: 1;
-    background-color: rgb(94, 90, 123);
+    background-color: rgb(83, 85, 116);
     margin-left: -15px;
-    display: flex;
     padding-left: 50px;
-    padding-top: 15px;
+    padding-top: 10px;
     padding-right: 50px;
-    flex-direction: row;
-    justify-content: space-between;
+   
 }
 
-.icon-home{
+.nav-container {
+    display: flex;
+    margin: auto 12px;
+    flex-direction: row;
+    justify-content: space-between;
+    color: transparent;
+}
+
+.icon-nav{
    display: flex;
     flex-direction: column;
-    margin-left: 40px;
+  margin: auto;
 }
 
 .icon-fill {
@@ -92,8 +136,8 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
     fill:white;
-    width: 50px;
-    padding: 9px 18px 9px 18px;
+    width: 52px;
+    padding: 9px 10px 9px 18px;
 }
 
 .icon-settings {
@@ -105,23 +149,11 @@ h1 {
 /*------------------------
 |          MAIN         |
 ------------------------*/
-#alert {
-    justify-content: center;
-    font-weight: 200;
-    font-size: 21px;
-    margin: 20px 0 40px 0;
-}
-
-.alert-banner {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 22px ;
-    width: 90%;
-    height: 63px;
-    border-radius: 9px;
-    background-color: rgb(124, 122, 208);
-    color: white;
+main {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    margin-left: 10px;
 }
 
 .dash {
@@ -132,7 +164,7 @@ h1 {
 .dashboard {
     display: flex;
     flex-direction: column;
-    font-size: 30px;
+    font-size: 29px;
 }
 
 .emty-flex {
@@ -146,6 +178,31 @@ h1 {
     margin-left: 20px;
 }
 
+#alert {
+    justify-content: center;
+    font-weight: 200;
+    font-size: 23px;
+    margin: 20px 0 30px 0;
+    color: white;
+    background-color: rgb(124, 122, 208);
+    padding: 6px ;
+    width: 95%;
+    height: 45px;
+    border-radius: 9px;
+}
+
+.alert-banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 15px ;
+   
+    
+}
+.alert-banner-p {
+    margin: 9px 0 0 0;
+}
+
 
 
 /*------------------------
@@ -153,55 +210,74 @@ h1 {
 ------------------------*/
 .traffic-section {
     border-bottom: solid 2px rgb(205, 205, 205);
-    margin-left: -15px;
+    margin: 0 0px 20px -30px;
     padding-left: 15px;
     display: flex;
     flex-direction: column;
 }
-
+.traffic-container {
+    margin: 0px 0 20px 0;
+}
 .traffic-time {
     display: flex;
     flex-direction: row;
-    padding: 0 10px;
+    padding: 0;
     justify-content: space-between;
-    margin-right: 80px;
-    margin-left: 20px;
+    margin: 0 80px 0 15px;
+    
 }
-
+.traffic-title {
+    font-size: 24px;
+    margin: 15px auto 10px 15px;
+}
 .time {
     justify-content: space-between;
     list-style-type: none;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 300;
     padding: 10px 20px;
     color: black;
+    margin: 0px 0px 10px 0;
 }
 
 .time:active,
 .time:hover {
     color: #fff;
-    background: #89db85;
+    background: #92ce8f;
     border-radius: 22% / 50%;
     
 }
 
+.line-chart {
+   margin: 0 20px 30px 20px;
+ 
+   font-size: 30px;
 
-main {
-    grid-row-start: 3;
-    grid-column-start: 1;
-    grid-column-end: 1; 
+}
+
+#traffic-chart {
+
+    width: 450px;
+    max-height: 180px;
+    margin: 0;
+    font-size: 30px;
 }
 
 
 
-/*------------------------
-| DAILY TRAFFIC SECTION  |
-------------------------*/
 .daily-traffic-section {
 
     border-bottom: solid 2px rgb(205, 205, 205);
-    margin-left: -15px;
+    margin-left: -30px;
     padding-left: 15px;
+}
+
+.daily-title {
+    font-size: 24px;
+    margin: auto auto 50px 15px;
+}
+#daily-chart {
+    margin:10px 30px 30px 20px;
 }
 
 
@@ -211,9 +287,13 @@ main {
 ------------------------*/
 .mobile-users-section {
     border-bottom: solid 2px rgb(205, 205, 205);
-    margin-left: -15px;
+    margin-left: -25px;
     padding-left: 15px;
 }
+#mobile-chart {
+    margin:50px 40px 30px 15px;
+}
+
 
 
 /*------------------------
@@ -221,17 +301,23 @@ main {
 ------------------------*/
 .social-stats-section {
     border-bottom: solid 2px rgb(205, 205, 205);
-    margin-left: -15px;
-    padding-left: 15px;
+    margin-left: -25px;
+    padding-left: 25px;
     display: flex;
     flex-direction: column;
+}
+
+.social-title {
+  
+    font-size: 26px;
+    font-weight: bolder;
 }
 
 .social-div {
 
     display: flex;
     flex-direction: row;
-    margin: 10px;
+    margin: 5px 20px 22px 0px;
     border: solid 2px #05050533;
     border-radius: 10px;
     background: #f1f0f0;
@@ -283,8 +369,10 @@ main {
 .new-member-div {
     display: flex;
     flex-direction: column;
-    border-bottom: solid 2px rgb(180, 180, 180);
-    margin-left: -15px;
+    border-bottom: solid 1px rgb(180, 180, 180);
+    margin: 0 0 0 -25px;
+    
+    
 }
 
 .members-images {
@@ -302,25 +390,19 @@ main {
     font-size: 25px;
     color: black;
     font-weight: 300;
-    border-bottom: solid 2px rgb(180, 180, 180);
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-top: 30px;
+    padding-bottom: 30px;
+    margin: 30px 30px 0 30px;
+    border-bottom: solid 1px rgb(180, 180, 180);
 }
 
-.member4-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 25px;
-    color: black;
-    font-weight: 300;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-top: 30px;
+.members-div.four {
+border: none;
 }
+
+.date, .p-member {
+    margin:0;
+}
+
 
 a {
     text-decoration: none;
@@ -332,21 +414,17 @@ a {
 /*------------------------
 |  MESSAGE USER SECTION  |
 ------------------------*/
-.user-box {
-    color: aquamarine;
-    margin: 10px;
-    padding: 25px 10px;
-    width: 90%;
-    border: solid 2px rgb(180, 180, 180);
-    border-radius: 7px;
-    background-color: #f5f5f5;
-    font-size: 23px ;
-}
+
+.message-title  {
+
+margin: 25px auto 15px 30px;
+ }
+
 
 .user-box {
-    margin: 10px;
+    margin: 10px 20px 10px 30px;
     padding: 20px 10px;
-    width: 90%;
+    width: 88%;
     border: solid 2px rgb(213, 213, 213);
     border-radius: 7px;
     background-color: #f5f5f5;
@@ -354,9 +432,9 @@ a {
 }
 
 .message-box {
-    margin: 10px;
+    margin: 10px 20px 10px 30px;
     padding: 25px 10px;
-    width: 90%;
+    width: 88%;
     min-height: 150px;
     border: solid 2px rgb(213, 213, 213);
     border-radius: 7px;
@@ -377,14 +455,17 @@ a {
     color: #fff;
     background: rgb(124, 122, 208);
     font-size: 23px;
-    width: 95%;
+    width: 93%;
     border: solid 1px rgb(213, 213, 213);
     border-radius: 7px;
-    margin: 10px;
+    margin: 10px 10px 30px 30px;
     padding: 20px 10px;
 }
 
-
+.message-section {
+    border-bottom: solid 2px rgb(180, 180, 180);
+    margin-left: -25px;
+}
 
 /*------------------------
 |    SETTINGS/FOOTER     |
@@ -448,10 +529,7 @@ font-size: 25px;
     left: 17%;
 }
 
-.message-section {
-    border-bottom: solid 2px rgb(180, 180, 180);
-    margin-left: -15px;
-}
+
 
 footer {
     grid-row-start: 4;
@@ -461,11 +539,9 @@ footer {
 
 .timezone-box {
     -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     margin: 10px;
     padding: 20px 10px;
-    width: 93%;
+    width: 99%;
     border: solid 2px rgb(213, 213, 213);
     border-radius: 7px;
     background-color: #f5f5f5;
@@ -473,6 +549,28 @@ footer {
     color: #9d9d9d;
 }
 
+
+.select:after {
+    content: '\25BE';
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    bottom: 0;
+    font-size: 45px;
+    text-shadow: 1px 1px 10px rgb(127, 127, 127);
+  
+    background: #f5f5f5;
+    color: rgb(124, 122, 208);
+    padding: 3px;
+    pointer-events: none;
+    height: 45px;
+    
+}
+
+.select {
+    position: relative;
+    width: 95%;
+}
 .save-button {
     text-transform: uppercase;
     color: #fff;
@@ -496,4 +594,744 @@ footer {
     border-radius: 7px;
     margin: 10px;
     padding: 20px 10px;
+}
+
+
+.arrow-activity {
+  display: none;
+}
+
+
+
+/*-----------------------------------------------------
+|                     Media 768px                     |
+------------------------------------------------------*/
+@media (min-width: 768px) {
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 200;
+        padding-left: 15px;
+        color:rgb(0, 0, 0);
+        display: grid;
+        grid-template-columns:66px 1fr;
+        grid-template-rows: 72px 1fr 1fr;
+    }
+
+
+
+    /*------------------------
+    |         Header         |
+    ------------------------*/
+    header {
+        font-weight: lighter;
+        font-size: 11px;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background-color: rgb(124, 122, 208);
+        color: white; 
+        display: flex;
+        flex-direction: row;
+        padding: 8px 0 0 10px;
+        margin-left: -15px;
+        justify-content: space-between;
+        font-weight: bold;
+    }
+
+    h1 {
+        color: white; 
+        font-weight: bold;
+        flex: 2;
+        margin-left: -15px;
+    }
+
+   
+    
+    .bell {
+        margin: 18px 3px 0 auto;
+        max-width: 25px;
+    }
+    
+   
+    
+    .bell-dot {
+        border-radius: 50%;
+        width: 5px;
+        height: 5px;
+        background: #68f15b;
+        position: relative;
+        right:10px;
+        top: 14px;
+        margin-right: 5px;
+    }
+    
+    .student-image {
+        border-radius: 50%;
+        padding-left: 10px;
+        width: 37px;
+        padding: 5px 10px 5px 15px;
+
+    }
+    
+    .student-div {
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border-left: rgb(160, 160, 160) solid 1px;
+        padding: 0;
+    }
+    
+    .student-name {
+        margin: 20px 10px 0 0px;
+    }
+
+
+
+    /*------------------------
+    |           NAV          |
+    ------------------------*/
+    .nav-class{
+     
+        grid-column-start: 1;
+    
+        grid-row-start: 2;
+        grid-row-end: 4;
+        
+        background-color: rgb(94, 90, 123);
+         display: flex;
+        flex-direction: row;
+        padding: 0;
+        
+    }
+
+    .nav-container {
+      position:fixed;
+  
+      display: block;
+      flex-direction: row;
+        margin: 15px 0 0 12px;
+        color: transparent;
+    }
+    
+  
+    .icon-fill {
+      
+        fill:white;
+        width: 35px;
+        padding: 9px 10px 9px 10px;
+        margin-bottom: 10px;
+    }
+    
+    .icon-settings {
+        margin-right: 35px;
+    }
+
+    /*------------------------
+    |          MAIN         |
+    ------------------------*/
+    main {
+        grid-row-start: 2;
+        grid-column-start: 2;
+        grid-column-end: 2; 
+        margin: 0 0 0 30px;
+        
+        }
+
+    .dashboard {
+        font-size: 20px;
+    }
+
+    .emty-flex {
+        flex-direction: row;
+        display: flex;
+        width: 100% ;
+        height: 55px;
+        background-color:rgb(249, 249, 249);
+        border-left: solid 1px  rgb(205, 205, 205);
+        border-bottom: solid px rgb(205, 205, 205);
+        margin-left: 17px;
+    }
+    
+    #alert {
+        justify-content: center;
+        font-weight: 200;
+        font-size: 15px;
+        margin: 20px 0 10px 0;
+        color: white;
+        background-color: rgb(124, 122, 208);
+        padding: 3px 1px;
+        width: 97%;
+        height: 28px;
+        border-radius: 5px;
+    }
+    
+    .alert-banner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .alert-banner-p {
+        margin: 5px 0 0 0;
+    }
+
+
+/*------------------------
+|    TRAFFIC SECTION     |
+------------------------*/
+.traffic-section {
+    border-bottom: none;
+}
+    .traffic-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .traffic-title {
+        flex-grow: 2;
+        font-size:17px;
+    }
+
+    .traffic-time {
+        margin-right: 5px;
+        font-size: 10px;
+    }
+
+    
+    .time {
+        justify-content: space-between;
+        list-style-type: none;
+        font-size: 15px;
+        font-weight: 300;
+        padding: 10px;
+        color: black;
+    }
+    
+    .time:active,
+    .time:hover {
+        color: #fff;
+        background: #89db85;
+        border-radius: 22% / 50%;
+        
+    }
+
+.line-chart {
+    margin-bottom: 5px;
+}
+    #traffic-chart {
+
+        width: 450px;
+        max-height: 280px;
+        margin: 0;
+        font-size: 30px;
+    }
+    
+    /*------------------------
+    | DAILY TRAFFIC SECTION  |
+    ------------------------*/
+    .grafic-section{
+        display: flex;
+        flex-direction: row;
+        margin-right: 0px;
+        padding-right: 0px;
+        margin-left: -30px;
+        border-top:solid 2px rgb(205, 205, 205);
+        border-bottom:solid 2px rgb(205, 205, 205);
+    }
+    
+    .daily-title {
+        margin: 20px auto auto 10px;
+        font-size: 17px;
+    }
+    .daily-traffic-section {
+        border-right: solid 2px rgb(205, 205, 205);
+        margin-left: 0px;
+        
+        border-bottom: none;
+        
+    }
+    #daily-chart {
+        height: 180px;
+        width: 350px;
+        margin:30px 25px 30px 10px;
+    }
+
+
+    /*------------------------
+    |  MOBILE USERS SECTION  |
+    ------------------------*/
+        
+    .mobile-title {
+        margin:20px auto 0 30px;
+        font-size: 17px;
+    }
+
+    .doughnut-chart {
+        margin: 0 auto auto 30px;
+        width: 370px;
+    }
+    #mobile-chart {
+        margin-top: 35px;
+    }
+
+
+    .mobile-users-section {
+        border: none;
+    }
+
+
+    /*------------------------
+    |     SOCIAL SECTION     |
+    ------------------------*/
+
+    .social-stats-section {
+        border-bottom: solid 2px rgb(205, 205, 205);
+        margin-left: -30px;
+        padding-left: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social-stats-div {
+        display: flex;
+        flex-direction: row;
+    }
+
+  
+    .social-title {
+      
+        font-size: 20px;
+      
+    }
+    
+    .social-div {
+        margin: 5px 10px 22px 0px;
+        width:100%;
+    }
+    
+    .social-icon-div {
+        margin:20px;
+        padding: 19px;
+        height: 35px;
+    }
+    .social-fill {
+        width:35px;
+    
+    }
+    
+    .social-text{
+        font-size: 20px;
+    }
+    
+    .social-numbers{
+        font-size: 40px;
+    }
+    
+    .text-numbers-div {
+        display: flex;
+        flex-direction: column;
+        margin:0 15px 0 0;
+        justify-content: center;
+    }
+
+
+    /*------------------------
+    |   NEW MEMBERS SECTION  |
+    ------------------------*/
+
+  .titles {
+    font-size: 20px;
+  }
+    .new-member-div {
+     
+        border-bottom: solid 1px rgb(180, 180, 180);
+        margin-left: -30px;
+    }
+    
+    .members-div {
+        display: flex;
+        flex-direction: row;
+    
+    }
+    .members-images {
+        border-radius: 50%;
+       width: 70px;
+    }
+
+    .p-member {
+    flex-grow: 2;
+    padding-left: 20px;
+    font-size: 18px;
+    }
+    .date {
+
+        justify-content: right;
+        align-items:end;
+        text-align: right;
+    }
+    
+    
+    .members-div {
+        justify-content: left;
+        align-items: left;
+        text-align: left;
+        font-size: 25px;
+        color: black;
+        font-weight: 300;
+        padding-bottom: 30px;
+        margin: 30px 30px 0 30px;
+        border-bottom: solid 1px rgb(180, 180, 180);
+    }
+
+    .members-div.four {
+         border:none;
+    }
+    
+    .member4-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 25px;
+        color: black;
+        font-weight: 300;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    .date {
+        margin:0;
+        font-size: 18px;
+    }
+    
+    
+    a {
+        text-decoration: none;
+        color: rgb(114, 114, 211);
+    }
+    
+
+
+    .arrow-activity {
+        display: inline;
+        font-weight: bold;
+        color:rgb(124, 122, 208) ;
+        
+    }
+
+
+    .members-div.four {
+        border:none;
+   }
+
+   
+
+   /*------------------------
+    |  MESSAGE USER  |
+    ------------------------*/
+   .message-title {
+
+    font-size: 20px;
+   }
+   .message-section {
+    margin: 0;
+   }
+
+   .user-box {
+    width: 90%;
+    
+   }
+
+   .message-box {
+    width: 90%;
+   }
+   .send-button {
+   
+    width: 93%;
+   }
+
+    /*------------------------
+    |        SETTINGS        |
+    ------------------------*/
+    footer {
+        grid-row-start: 3;
+        grid-column-start: 2;
+        grid-column-end:3;
+    }
+
+    .settings {
+        margin-left: 30px;
+    }
+
+    .form {
+        justify-content: flex-start;
+    }
+
+    #toggle {
+        font-size: 22px;
+    }
+    .swich {
+        margin-left: 50px;
+    }
+    .swich.public {
+
+        margin-left: 98px;
+    }
+    .timezone-box {
+        margin-left: 0;
+    }
+    .select{
+        
+        width: 99%;
+    }
+
+    .save-button {
+        margin-left: 0px;
+        width: 47%;
+    }
+
+    .cancel-button {
+        width: 47%;
+        margin-left: 18px;
+    }
+
+}
+
+
+
+
+
+/*-----------------------------------------------------
+|                     Media 1024px                     |
+------------------------------------------------------*/
+@media (min-width: 1024px) {
+
+
+
+    .daily-traffic-section {
+        width: 50%;
+    }
+    /*------------------------
+    |  MOBILE USERS SECTION  |
+    ------------------------*/
+    .mobile-users-section {
+       width: 50%;
+    }
+
+    .doughnut-chart{
+        margin:40px 10px 10px 60px;
+    }
+    #mobile-chart {
+        margin:0;
+    }
+
+    /*------------------------
+    |     SOCIAL SECTION     |
+    ------------------------*/
+    .social-div {
+
+        height: 95px;
+    }
+    .social-icon-div {
+        margin:20px;
+        padding: 15px;
+        height: 30px;
+    }
+    .social-fill {
+        width:30px;
+    
+    }
+    
+    .social-text{
+        font-size: 20px;
+    }
+    
+    .social-numbers{
+        font-size: 35px;
+    }
+    
+
+    /*------------------------
+    |   NEW MEMBERS SECTION  |
+    ------------------------*/
+    .titles {
+        font-size: 15px;
+        margin-bottom: 0px;
+    }
+    .new-members-activity {
+        display:flex;
+        flex-direction: row;
+        margin-left: 0px;
+    }
+
+    .new-member-section {
+        border-right: solid 2px gray;
+        width:50%;
+        
+    }
+
+    .members-images {
+    
+        width: 60px;
+
+    }
+
+    .p-member {
+        font-size: 15px;
+        padding-left: 10px;
+    }
+    .date {
+        font-size: 15px;
+    }
+
+
+
+    /*------------------------
+    | RECENT ACTIVITY SECTION|
+    ------------------------*/
+    .recent-activity-section {
+        margin-left: 15px;
+        width:50%;
+    }
+
+
+
+    /*------------------------
+    |  MESSAGE USER/FOOTER   |
+    ------------------------*/
+    .message-footer {
+        display:flex;
+        flex-direction: row;
+        margin-right: 0;
+        
+    }
+    
+    .message-section {
+        width:50.7%;
+        border-right: solid 2px gray ;
+        border-bottom: none;
+    }
+
+    .message-title {
+        font-size: 15px;
+        margin:15px;
+    }
+    .user-box {
+        width:88%;
+        font-size: 15px ;
+        height: 5px;
+        margin: 0 0 0 15px;
+        
+    }
+
+    .message-box {
+        width:88%;
+        font-size: 15px ;
+        min-height: 90px;
+        margin: 15px 0 0 15px;
+        align-items: center;
+    }
+
+    ::placeholder {
+        position: absolute;
+        top: 0px;
+        color: #b3b3b3;
+        padding: 12px 4px;
+    }
+    .send-button {
+        margin: 10px 0 15px 15px;
+        height: 47px;
+        font-size: 15px;
+        padding-top: 15px;
+        width: 93.3%;
+        
+    }
+    .settings {
+        width: max-content;
+        flex-grow: 2;
+        
+       
+        
+    }
+
+
+
+    /*------------------------
+    |    SETTINGS/FOOTER     |
+    ------------------------*/
+    .settings {
+        width: 44%;
+        margin-left: 15px;
+    }
+
+    .swich {
+        width: 20%;
+        height: 35px;
+        margin-left: 50px;
+    }
+    .swich.public {
+        margin-left: 83px;
+    }
+
+    .swich:checked::before{
+        font-size: 15px;
+    }
+    
+    .swich::before{
+        font-size: 15px;
+    }
+    
+    .swich::after {
+        height: 20px;
+        width: 22px;
+    }
+
+    #toggle {
+        font-size: 15px;
+    }
+
+
+    .timezone-box {
+        height: 50px;
+        margin: 15px 0 0 0;
+        padding: 0px 15px;
+        width: 98%;
+        margin-right: 0;
+        font-size: 15px;
+ 
+    }
+    
+    .select:after {
+        content: '\25BE';
+        position: absolute;
+        top: 25px;
+        right: 30px;
+        bottom: 0;
+        font-size: 27px;
+        text-shadow: 1px 1px 5px rgb(127, 127, 127);
+        margin:0;
+        background: #f5f5f5;
+        color: rgb(124, 122, 208);
+        padding: 0px;
+        pointer-events: none;
+        height: 25px;
+        
+    }
+
+    .save-button {
+        width: 47%;
+        margin: 15px 0 15px 0px;
+        height: 47px;
+        font-size: 15px;
+        padding-top: 15px;
+    }
+    .cancel-button{
+        margin: 15px 0 15px 10px;
+        height: 47px;
+        font-size: 15px;
+        padding-top: 15px;
+        width: 47%;
+    }
 }

@@ -1,6 +1,7 @@
+/*jshint esversion: 6 */
+
 const alertBanner = document.getElementById("alert");
 const trafficCanvas = document.getElementById("traffic-chart");
-
 const dailyCanvas = document.getElementById("daily-chart");
 const mobileCanvas = document.getElementById("mobile-chart");
 const user = document.getElementById("userField");
@@ -16,14 +17,14 @@ const send = document.getElementById("send");
 // create the html for the banner
 alertBanner.innerHTML =
 `<div class="alert-banner">
-  <p><strong>Alert:</strong> You have unread messages</p>
-  <p class="alert-banner-close">x</p>
-</div>`
+  <p class="alert-banner-p"><strong>Alert:</strong> You have unread messages</p>
+  <p class="alert-banner-p">x</p>
+</div>`;
 
 alertBanner.addEventListener('click', e => {
   const element = e.target;
-  if (element.classList.contains("alert-banner-close")) {
-    alertBanner.style.display = "none"
+  if (element.classList.contains("alert-banner-p")) {
+    alertBanner.style.display = "none";
   }
 });
 
@@ -32,6 +33,8 @@ alertBanner.addEventListener('click', e => {
 /*------------------------
 |    TRAFFIC SECTION     |
 ------------------------*/
+Chart.defaults.font.size = 16;
+Chart.defaults.font.weight = 530;
 let trafficData = {
   labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
   "4-10", "11-17", "18-24", "25-31"],
@@ -76,6 +79,7 @@ let trafficChart = new Chart(trafficCanvas, {
 | DAILY TRAFFIC SECTION  |
 ------------------------*/
 // data for daily traffic bar chart
+
 const dailyData = {
   labels: ["S", "M", "T", "W", "T", "F", "S"],
   datasets: [{
@@ -111,6 +115,7 @@ let dailyChart = new Chart(dailyCanvas, {
 /*------------------------
 |  MOBILE USERS SECTION  |
 ------------------------*/
+
 const mobileData = {
   labels: ["Desktop", "Tablet", "Phones"],
   datasets: [{
