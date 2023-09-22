@@ -11,6 +11,7 @@ body {
     grid-template-columns:1fr;
     grid-template-rows: 110px 90px 1fr 1fr;
     padding-right: 3px;
+    max-height:3500px;
 }
 
 header {
@@ -23,6 +24,7 @@ header {
     display: flex;
   
     margin-left: -15px;
+   
     padding-bottom: 20px;
     justify-content: space-between;
     font-weight: bold;
@@ -422,9 +424,9 @@ margin: 25px auto 15px 30px;
 
 
 .user-box {
-    margin: 10px 20px 10px 30px;
+    margin: 10px 0px 10px 30px;
     padding: 20px 10px;
-    width: 88%;
+    width: 86%;
     border: solid 2px rgb(213, 213, 213);
     border-radius: 7px;
     background-color: #f5f5f5;
@@ -432,9 +434,9 @@ margin: 25px auto 15px 30px;
 }
 
 .message-box {
-    margin: 10px 20px 10px 30px;
+    margin: 10px 0px 10px 30px;
     padding: 25px 10px;
-    width: 88%;
+    width: 86%;
     min-height: 150px;
     border: solid 2px rgb(213, 213, 213);
     border-radius: 7px;
@@ -455,10 +457,10 @@ margin: 25px auto 15px 30px;
     color: #fff;
     background: rgb(124, 122, 208);
     font-size: 23px;
-    width: 93%;
+    width: 91%;
     border: solid 1px rgb(213, 213, 213);
     border-radius: 7px;
-    margin: 10px 10px 30px 30px;
+    margin: 10px 0px 30px 30px;
     padding: 20px 10px;
 }
 
@@ -615,7 +617,7 @@ footer {
         color:rgb(0, 0, 0);
         display: grid;
         grid-template-columns:66px 1fr;
-        grid-template-rows: 72px 1fr 1fr;
+        grid-template-rows: 72px 1fr;
     }
 
 
@@ -885,7 +887,7 @@ footer {
 
     .social-stats-section {
         border-bottom: solid 2px rgb(205, 205, 205);
-        margin-left: -30px;
+        margin:auto 15px auto -30px;
         padding-left: 25px;
         display: flex;
         flex-direction: column;
@@ -899,7 +901,7 @@ footer {
   
     .social-title {
       
-        font-size: 20px;
+        font-size: 17px;
       
     }
     
@@ -910,20 +912,20 @@ footer {
     
     .social-icon-div {
         margin:20px;
-        padding: 19px;
-        height: 35px;
+        padding: 15px;
+        height: 32px;
     }
     .social-fill {
-        width:35px;
+        width:32px;
     
     }
     
     .social-text{
-        font-size: 20px;
+        font-size: 19px;
     }
     
     .social-numbers{
-        font-size: 40px;
+        font-size: 37px;
     }
     
     .text-numbers-div {
@@ -939,7 +941,7 @@ footer {
     ------------------------*/
 
   .titles {
-    font-size: 20px;
+    font-size: 17px;
   }
     .new-member-div {
      
@@ -1033,23 +1035,29 @@ footer {
     ------------------------*/
    .message-title {
 
-    font-size: 20px;
+    font-size: 17px;
    }
    .message-section {
     margin: 0;
    }
 
    .user-box {
-    width: 90%;
+    width: 91.3%;
+    font-size: 17px;
+    height: 40px;
+    padding:15px 0 0 10px;
     
    }
 
    .message-box {
     width: 90%;
+    font-size: 17px;
    }
    .send-button {
-   
+    height: 50px;
     width: 93%;
+    font-size: 17px;
+    padding-top: 15px;
    }
 
     /*------------------------
@@ -1070,31 +1078,68 @@ footer {
     }
 
     #toggle {
-        font-size: 22px;
+        font-size: 18px;
     }
     .swich {
+        width: 15%;
+        height: 43px;
         margin-left: 50px;
     }
     .swich.public {
 
-        margin-left: 98px;
+        margin-left: 90px;
     }
+    .swich:checked::before{
+        font-size: 19px;
+    }
+    .swich::before{
+        font-size: 19px;
+    }
+
+    .swich::after {
+        height: 23px;
+        width: 25px;
+    }
+
     .timezone-box {
         margin-left: 0;
+        height: 50px;
+        width: 97%;
+        font-size: 17px;
+        padding: 4px 0 0 15px;
     }
+
+    
     .select{
-        
         width: 99%;
     }
 
+    .select:after {
+        top: 20px;
+        right: 41px;
+        bottom: 0;
+        font-size: 30px;
+        text-shadow: 1px 1px 5px rgb(127, 127, 127);
+        margin:0;
+        padding: 0px;
+        pointer-events: none;
+        height: 25px;
+        
+    }
     .save-button {
         margin-left: 0px;
         width: 47%;
+        height: 50px;
+        padding: 4px 0 0 15px;
+        font-size: 17px;
     }
 
     .cancel-button {
         width: 47%;
-        margin-left: 18px;
+        margin-left: 0px;
+        height: 50px;
+        padding: 4px 0 0 15px;
+        font-size: 17px;
     }
 
 }
@@ -1108,8 +1153,7 @@ footer {
 ------------------------------------------------------*/
 @media (min-width: 1024px) {
 
-
-
+    
     .daily-traffic-section {
         width: 50%;
     }
@@ -1167,7 +1211,7 @@ footer {
     }
 
     .new-member-section {
-        border-right: solid 2px gray;
+        border-right: solid 1px rgb(180, 180, 180);
         width:50%;
         
     }
@@ -1201,6 +1245,11 @@ footer {
     /*------------------------
     |  MESSAGE USER/FOOTER   |
     ------------------------*/
+
+    footer {
+        margin-left: 14px;
+    }
+
     .message-footer {
         display:flex;
         flex-direction: row;
@@ -1209,8 +1258,8 @@ footer {
     }
     
     .message-section {
-        width:50.7%;
-        border-right: solid 2px gray ;
+        width:50%;
+        border-right: solid 1px rgb(180, 180, 180);
         border-bottom: none;
     }
 
@@ -1219,18 +1268,18 @@ footer {
         margin:15px;
     }
     .user-box {
-        width:88%;
+        width:89%;
         font-size: 15px ;
-        height: 5px;
+        height: 30px;
         margin: 0 0 0 15px;
         
     }
 
     .message-box {
-        width:88%;
+        width:87%;
         font-size: 15px ;
-        min-height: 90px;
-        margin: 15px 0 0 15px;
+        min-height: 88px;
+        margin: 18px 0 0 15px;
         align-items: center;
     }
 
@@ -1245,11 +1294,11 @@ footer {
         height: 47px;
         font-size: 15px;
         padding-top: 15px;
-        width: 93.3%;
+        width: 92.3%;
         
     }
     .settings {
-        width: max-content;
+        width: 50%;
         flex-grow: 2;
         
        
@@ -1295,7 +1344,7 @@ footer {
 
     .timezone-box {
         height: 50px;
-        margin: 15px 0 0 0;
+        margin: 25px 0 0 0;
         padding: 0px 15px;
         width: 98%;
         margin-right: 0;
@@ -1306,7 +1355,7 @@ footer {
     .select:after {
         content: '\25BE';
         position: absolute;
-        top: 25px;
+        top: 35px;
         right: 30px;
         bottom: 0;
         font-size: 27px;
@@ -1325,13 +1374,13 @@ footer {
         margin: 15px 0 15px 0px;
         height: 47px;
         font-size: 15px;
-        padding-top: 15px;
+       
     }
     .cancel-button{
         margin: 15px 0 15px 10px;
         height: 47px;
         font-size: 15px;
-        padding-top: 15px;
+     
         width: 47%;
     }
 }
