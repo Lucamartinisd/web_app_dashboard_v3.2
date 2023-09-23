@@ -79,7 +79,6 @@ let trafficChart = new Chart(trafficCanvas, {
 | DAILY TRAFFIC SECTION  |
 ------------------------*/
 // data for daily traffic bar chart
-
 const dailyData = {
   labels: ["S", "M", "T", "W", "T", "F", "S"],
   datasets: [{
@@ -111,11 +110,9 @@ let dailyChart = new Chart(dailyCanvas, {
 
 
 
-
 /*------------------------
 |  MOBILE USERS SECTION  |
 ------------------------*/
-
 const mobileData = {
   labels: ["Desktop", "Tablet", "Phones"],
   datasets: [{
@@ -130,7 +127,6 @@ const mobileData = {
   }]
 };
 
-
 const mobileOptions = {
   aspectRatio: 1.9,
   plugins: {
@@ -144,15 +140,11 @@ const mobileOptions = {
   }
 };
 
-
 let mobileChart = new Chart(mobileCanvas, {
   type: 'doughnut',
   data: mobileData,
   options: mobileOptions
 });
-
-
-
 
 
 
