@@ -1,14 +1,14 @@
 
 body {
-   font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 200;
-    padding-left: 15px;
+    width:100%;
+    margin:0;
+    padding:0;
     color:black;
     display: grid;
     grid-template-columns:1fr;
-    grid-template-rows: 110px 90px 1fr 1fr;
-    padding-right: 3px;
-    max-height:3500px;
+    grid-template-rows: 110px 90px 1fr ;
 }
 
 
@@ -17,27 +17,21 @@ body {
 |         Header         |
 ------------------------*/
 header {
-    font-weight: lighter;
     font-size: 19px;
     grid-column-start: 1;
     grid-column-end: 1;
     background-color: rgb(124, 122, 208);
     color: white; 
     display: flex;
-    margin-left: -15px;
     padding-bottom: 20px;
     justify-content: space-between;
-    font-weight: bold;
 }
 
-h1 {
+.web-app-tm {
     color: white;
     flex-grow: 2;
     padding-left: 15px;
-}
-
-.bold-word {
-    font-weight: 500;
+    font-weight: 200;
 }
 
 .bell {
@@ -97,6 +91,7 @@ span.bell-fill {
 .student-name {
     margin-right: 10px;
     margin-top: 39px;
+    font-weight: 300;
 }
 
 
@@ -110,7 +105,6 @@ span.bell-fill {
     grid-row-start: 2;
     grid-column-end: 1;
     background-color: rgb(83, 85, 116);
-    margin-left: -15px;
     padding-left: 50px;
     padding-top: 10px;
     padding-right: 50px;
@@ -153,7 +147,7 @@ main {
     grid-row-start: 3;
     grid-column-start: 1;
     grid-column-end: 1;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .dash {
@@ -165,6 +159,7 @@ main {
     display: flex;
     flex-direction: column;
     font-size: 29px;
+    font-weight: 500;
 }
 
 .emty-flex {
@@ -232,13 +227,14 @@ main {
 .traffic-title {
     font-size: 24px;
     margin: 15px auto 10px 15px;
+    font-weight: 500;
 }
 
 .time {
     justify-content: space-between;
    
     font-size: 22px;
-    font-weight: 300;
+    font-weight: 500;
     padding: 10px 20px;
     color: black;
     margin: 0px 0px 10px 0;
@@ -277,6 +273,7 @@ main {
 .daily-title {
     font-size: 24px;
     margin: auto auto 50px 15px;
+    font-weight: 500;
 }
 
 #daily-chart {
@@ -290,8 +287,12 @@ main {
 ------------------------*/
 .mobile-users-section {
     border-bottom: solid 1px rgb(205, 205, 205);
-    margin-left: -25px;
-    padding-left: 15px;
+ 
+
+}
+
+.mobile-title {
+    font-weight: 500;
 }
 
 #mobile-chart {
@@ -305,15 +306,14 @@ main {
 ------------------------*/
 .social-stats-section {
     border-bottom: solid 1px rgb(205, 205, 205);
-    margin-left: -25px;
-    padding-left: 25px;
     display: flex;
     flex-direction: column;
+    margin-left: 5px;
 }
 
 .social-title {
     font-size: 26px;
-    font-weight: bolder;
+    font-weight: 500;
 }
 
 .social-div {
@@ -368,6 +368,9 @@ main {
 /*------------------------------------
 | NEW MEMBERS /RECENT ACTIVITY SECTION|
 -------------------------------------*/
+.titles {
+    font-weight: 500;
+}
 .new-member-div {
     display: flex;
     flex-direction: column;
@@ -407,13 +410,20 @@ a {
     color: rgb(114, 114, 211);
 }
 
+.bold-word {
+    font-weight: 600;
+}
 
 
 /*------------------------------
 |  MESSAGE USER SECTION/FOOTER |
 ------------------------------*/
+.message-footer{
+    margin-left: 20px;
+}
 .message-title  {
     margin: 25px auto 15px 30px;
+    font-weight: 500;
 }
 
 .user-box {
@@ -475,6 +485,10 @@ a {
     font-size: 25px;
 }
 
+.toggle {
+    font-weight: 300;
+}
+
 .swich {
     -webkit-appearance: none;
     position: relative;
@@ -534,9 +548,9 @@ footer {
 
 .timezone-box {
     -webkit-appearance: none;
-    margin: 10px;
-    padding: 20px 10px;
-    width: 99%;
+    margin: 40px 0 10px;
+    padding: 20px;
+    width: 100%;
     border: solid 2px rgb(213, 213, 213);
     border-radius: 7px;
     background-color: #f5f5f5;
@@ -547,7 +561,7 @@ footer {
 .select:after {
     content: '\25BE';
     position: absolute;
-    top: 20px;
+    top: 45px;
     right: 25px;
     bottom: 0;
     font-size: 45px;
@@ -569,10 +583,10 @@ footer {
     color: #fff;
     background: rgb(124, 122, 208);
     font-size: 23px;
-    width: 45%;
+    width: 46%;
     border: solid 1px rgb(213, 213, 213);
     border-radius: 7px;
-    margin: 10px;
+    margin: 10px 0;
     padding: 20px 10px;
 }
 
@@ -581,10 +595,10 @@ footer {
     color: #fff;
     background: rgb(172, 172, 172);
     font-size: 23px;
-    width: 45%;
+    width: 46%;
     border: solid 1px rgb(182, 182, 182);
     border-radius: 7px;
-    margin: 10px;
+    margin: 10px 10px 40px;
     padding: 20px 10px;
 }
 
@@ -600,12 +614,12 @@ footer {
 @media (min-width: 768px) {
 
     body {
-        font-family: 'Roboto', sans-serif;
+        
         font-weight: 200;
-        padding-left: 15px;
+   
         color:rgb(0, 0, 0);
         display: grid;
-        grid-template-columns:66px 1fr;
+        grid-template-columns:70px 1fr;
         grid-template-rows: 72px 1fr;
     }
 
@@ -624,7 +638,7 @@ footer {
         display: flex;
         flex-direction: row;
         padding: 8px 0 0 10px;
-        margin-left: -15px;
+        
         justify-content: space-between;
         font-weight: bold;
     }
@@ -689,7 +703,7 @@ footer {
         position:fixed;
         display: block;
         flex-direction: row;
-        margin: 15px 0 0 12px;
+        margin: 15px 0 0 8px;
         color: transparent;
     }
     
@@ -985,7 +999,6 @@ footer {
     -------------------------*/
     .arrow-activity {
         display: inline;
-        font-weight: bold;
         color:rgb(124, 122, 208);
     }
 
@@ -994,6 +1007,9 @@ footer {
    /*------------------------
     |  MESSAGE USER/FOOTER  |
     ------------------------*/
+    .message-footer {
+        margin: 0;
+    }
     .message-title {
         font-size: 17px;
     }
@@ -1080,7 +1096,7 @@ footer {
     }
 
     .select:after {
-        top: 20px;
+        top: 45px;
         right: 41px;
         bottom: 0;
         font-size: 30px;
@@ -1101,7 +1117,7 @@ footer {
 
     .cancel-button {
         width: 47%;
-        margin-left: 0px;
+        margin-left: 10px;
         height: 50px;
         padding: 4px 0 0 15px;
         font-size: 17px;
@@ -1221,7 +1237,7 @@ footer {
     /*------------------------
     |  MESSAGE USER/FOOTER   |
     ------------------------*/
-    footer {
+    .message-footer {
         margin-left: 14px;
     }
 
@@ -1322,6 +1338,9 @@ footer {
         font-size: 15px;
     }
     
+    .select {
+        max-width: fit-content;
+    }
     .select:after {
         content: '\25BE';
         position: absolute;
